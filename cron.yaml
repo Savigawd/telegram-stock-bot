@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: telegram-pdf
+    env: python
+    schedule: "0 8 * * 0-4"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python send_pdf.py"
